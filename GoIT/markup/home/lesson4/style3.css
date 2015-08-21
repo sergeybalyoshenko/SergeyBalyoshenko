@@ -1,0 +1,54 @@
+.pager {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, sans-serif;
+    font-size: 10px;
+}
+
+.pager ul {
+    list-style: none;
+    background: #fafafa;
+    display: table;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+span {
+    position: relative;
+    top: 7px;
+    margin: 0 10px;
+}
+
+.pager ul li {
+    display: inline-block;
+}
+
+.pager ul li a {
+    color: #a13bcf;
+    text-decoration: none;
+    padding: 4px 7px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+ul li.text a {
+    border: none;
+}
+
+ul li a:hover {
+    background: #a13bcf;
+    color: white;
+    border: 1px solid #a13bcf;
+}
+
+ul li.text a:hover {
+    border: none;
+    background: none;
+    color: #a13bcf;
+}
+
+ul li.number a {
+    background: #a13bcf;
+    color: white;
+    border: 1px solid #a13bcf;
+}
