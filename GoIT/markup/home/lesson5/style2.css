@@ -82,16 +82,19 @@ ul li>img {
     right: 12px;
 }
 
-.button a {
-    display: inline-block;
+.button button {
     background: #ee8129;
     font-weight: bold;
     font-size: 14px;
     color: #fff;
-    text-decoration: none;
     text-transform: uppercase;
-    padding: 10px 77px;
+    border: none;
+    padding: 10px 68px;
     border-radius: 5px;
-    box-shadow: 0 3px #b3560b;
+    box-shadow: -1px 0 1px #edc3a1, 0 3px #b3560b;
     margin-bottom: 35px;
+}
+
+.button button:active {
+    box-shadow: none;
 }
