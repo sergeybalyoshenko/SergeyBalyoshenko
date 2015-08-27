@@ -183,7 +183,7 @@
     border: none;
     padding: 10px 68px;
     border-radius: 5px;
-    box-shadow: -1px 0 1px #edc3a1, 0 3px #b3560b;
+    box-shadow: -1px 0 1px #edc3a1, 0 3px 1px #b3560b;
     margin-bottom: 35px;
 }
 
