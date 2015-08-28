@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.parent {
+    background: url("images/background.png") no-repeat;
+    background-size: cover;
+    font-family: 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+
+   /*¬ lesson7 изменить*/
+    /*background: url("images/background.png") no-repeat*/
+    /*height: 315px; ? */
+    /*width: 1400px; ? */
+    /*max-width: 1400px; скорее всего сделать через max!!!*/
+    /*max-height: 315px;*/
+
+.tittle {
+    font-size: 40px;
+    font-weight: normal;
+    color: #3170a8;
+    text-transform: uppercase;
+    padding: 56px 0 50px 0;
+}
+
+.first_word {
+    color: #ee8129;
+}
+
+.testimonial {
+    display: inline-block;
+    margin-right: 40px;
+    margin-bottom: 26px;
+}
+
+.photo {
+    display: inline-block;
+    float: left;
+    margin-right: 26px;
+}
+
+.block {
+    display: inline-block;
+    position: relative;
+    background: #f7f7f7;
+    width: 330px;
+    padding: 0 15px;
+    border: 1px solid #e0e0e0;
+}
+
+.header {
+    border-bottom: 1px dotted #666666;
+    overflow: hidden;
+    font-size: 13px;
+    font-style: italic;
+    padding: 12px 0 9px 0;
+    text-decoration: none;
+}
+
+.name {
+    float: left;
+    text-decoration: none;
+    color: #3070a8;
+}
+
+.name:before {
+    content: "- ";
+}
+
+.customer {
+    margin-right: 5px;
+    float: right;
+    text-decoration: none;
+    color: #3070a8;
+}
+
+.some_text {
+    font-size: 13px;
+    color: #666;
+    text-align: left;
+    line-height: 1.5;
+    word-spacing: 0.2em;
+    padding: 9px 0;
+}
+
+.block:before {
+    content: "";
+    position: absolute;
+    border: 15px solid;
+    border-color: transparent #f7f7f7 transparent transparent;
+    top: 37%;
+    right: 100%;
+}
