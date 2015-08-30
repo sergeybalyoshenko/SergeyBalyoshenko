@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.sivtsev {
+    width: 402px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.sivtsev p {
+    display: inline-block;
+    font-family: sans-serif;
+    text-align: justify;
+    color: transparent;
+    text-shadow: 0 0 3px rgba(0,0,0,0.7);
+    width: 100%;
+}
+
+.sivtsev p:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+
+
+.sight01 {
+    font-size: 80px;
+}
+
+.sight02 {
+    font-size: 70px;
+}
+
+.sight03 {
+    font-size: 65px;
+}
+
+.sight04 {
+    font-size: 60px;
+}
+
+.sight05 {
+    font-size: 50px;
+}
+
+.sight06 {
+    font-size: 45px;
+}
+
+.sight07 {
+    font-size: 35px;
+}
+
+.sight08 {
+    font-size: 30px;
+}
+
+.sight09 {
+    font-size: 20px;
+}
+
+.sight10 {
+    font-size: 15px;
+}
+
+.uline {
+    position: relative;
+    width: inherit;
+    height: 1px;
+    box-shadow: 0 1px 1px rgba(255,0,0,0.3);
+    bottom: 12px;
+}
+
+.sight15 {
+    font-size: 12px;
+}
+
+.sight20 {
+    font-size: 10px;
+}
+
