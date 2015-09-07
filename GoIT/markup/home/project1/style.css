@@ -11,7 +11,7 @@
 }
 
 .header_center {
-    max-width: 1020px;
+    max-width: 1023px;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -57,6 +57,7 @@
 
 /* Header block off */
 
+/*______________________________________________________________________________________________________*/
 
 /* Banner block on */
 
@@ -75,7 +76,12 @@
     background: url("images/banner_bg.jpg") 50% 50% no-repeat;
     background-size: cover;
     text-align: center;
-    padding-top: 140px;
+}
+
+.banner_center {
+    max-width: 1023px;
+    margin: 0 auto;
+    padding-top: 120px;
 }
 
 .banner_tittle {
@@ -112,6 +118,11 @@
     cursor: pointer;
 }
 
+.banner_button button:hover {
+    box-shadow: 0 0 5px 2px #97a8b4;
+    color: #3070a8;
+}
+
 .banner_button button:active {
     box-shadow: inset 0 0 5px 3px #97a8b4;
 }
@@ -130,11 +141,16 @@
     text-align: center;
 }
 
+.services_center {
+    max-width: 1023px;
+    margin: 0 auto;
+    padding-top: 60px;
+}
+
 .services_tittle {
     font: bold 30px 'Trebuchet MS', sans-serif;
     color: #41525c;
     text-transform: uppercase;
-    margin-top: 60px;
     margin-bottom: 70px;
 }
 
@@ -148,23 +164,24 @@
 .services_text {
     font: 400 14px 'Opan Sans', sans-serif;
     color: #999;
-    margin-bottom: 60px;
+    margin-bottom: 70px;
 }
 
 .services_protect {
     display: inline-block;
-    width: 300px;
+    width: 280px;
+    margin-right: 88px;
 }
 
 .services_alert {
     display: inline-block;
-    width: 300px;
-    margin: 0 50px;
+    width: 280px;
+    margin-right: 87px;
 }
 
 .services_detect {
     display: inline-block;
-    width: 300px;
+    width: 280px;
 }
 
 /* Services block off */
@@ -183,7 +200,7 @@
 }
 
 .m-section_text {
-    width: 985px;
+    max-width: 1023px;
     margin: 0 auto;
     text-align: left;
 }
@@ -193,7 +210,7 @@
     color: #ee8129;
     text-transform: uppercase;
     line-height: 1.8;
-    padding-top: 75px;
+    padding-top: 85px;
 }
 
 .m-section_tittle-b {
@@ -235,7 +252,7 @@
     background-color: #fff;
     font-family: 'Trebuchet MS', sans-serif;
     text-align: center;
-    padding-bottom: 80px;
+    padding-bottom: 70px;
 }
 
 .pricing_tittle {
@@ -243,7 +260,7 @@
     color: #41525c;
     text-transform: uppercase;
     margin-bottom: 60px;
-    padding-top: 75px;
+    padding-top: 65px;
 }
 
 /* Left */
@@ -344,6 +361,7 @@
     border-radius: 5px;
     box-shadow: -1px 0 1px #a5bccf, 0 3px 1px #16436a;
     margin-bottom: 23px;
+    cursor: pointer;
 }
 
 .pricing_button-lr button:active {
@@ -393,6 +411,7 @@
     border-radius: 5px;
     box-shadow: -1px 0 1px #edc3a1, 0 3px 1px #b3560b;
     margin-bottom: 35px;
+    cursor: pointer;
 }
 
 .pricing_button-center button:active {
@@ -452,7 +471,7 @@
     font-weight: normal;
     color: #3170a8;
     text-transform: uppercase;
-    padding: 56px 0 50px 0;
+    padding: 50px 0;
 }
 
 .testimonials_first-word {
@@ -461,8 +480,15 @@
 
 .testimonials_review {
     display: inline-block;
-    margin-right: 40px;
-    margin-bottom: 80px;
+    margin-bottom: 70px;
+}
+
+.testimonials_review:first-of-type {
+    margin-right: 20px;
+}
+
+.testimonials_review:last-of-type {
+    margin-left: 20px;
 }
 
 .review_photo {
@@ -534,11 +560,76 @@
 
 /* Footer block on */
 
-.ñopyright {
+.footer {
+    position: relative;
+}
+
+.footer_address {
+    width: 1023px;
+    height: 345px;
+    background-color: #fff;
+    margin: 0 auto;
+}
+
+.address_list li img {
+    position: absolute;
+    left: 2px;
+}
+
+.address_list {
+    display: table;
+    list-style: none;
+    font: 600 14px 'Open Sans', sans-serif;
+    color: #666;
+    padding-left: 60px;
+    padding-top: 40px;
+    line-height: 2.2;
+    position: relative;
+}
+
+.address_list li:nth-child(5) {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.address_list li:last-child a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.address_list li:last-child a:hover {
+    color: #3070a8;
+}
+
+.address_list li:last-child img {
+    margin-top: 10px;
+    left: 0;
+}
+
+.social-link {
+    margin-top: 25px;
+    padding-left: 2px;
+}
+
+.social-link img {
+    margin-right: 20px;
+}
+
+.footer_map {
+    width: 50%;
+    height: 345px;
+    background: url("images/map.png") no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.footer_company {
     background-color: #3070a8;
 }
 
-.ñopyright_text {
+.company_text {
     font: 400 14px 'Open Sans', sans-serif;
     text-align: center;
     color: #fff;
