@@ -46,7 +46,8 @@ body {
     margin-top: 19px;
 }
 
-.header_logo-title {
+.header_logo-title a {
+    text-decoration: none;
     font: normal 40px 'Oleo Script', sans-serif;
     color: #222;
 }
@@ -79,25 +80,26 @@ body {
     color: #222;
 }
 
-.header_menu-list ul {
+.header_menu-list_submenu {
     display: none;
     background-color: #fff;
     font-size: 12px;
     position: absolute;
-    height: 140px;
+    min-height: 140px;
     width: 152px;
     border: 1px solid #ddd;
     border-radius: 3px;
-    padding: 10px 6px 8px;
+    padding: 10px 6px 0;
+    top: 33px;
     right: 7px;
     z-index: 1;
 }
 
-.header_menu-list li:nth-of-type(4):hover ul {
+.header_menu-list li:nth-of-type(4):hover .header_menu-list_submenu {
     display: block;
 }
 
-.header_menu-list ul:before {
+.header_menu-list_submenu:before {
     content: "";
     position: absolute;
     height: 9px;
@@ -110,45 +112,46 @@ body {
     transform: rotate(-135deg);
 }
 
-.header_menu-list ul li {
+.header_menu-list_submenu li {
     display: block;
-    height: 34px;
+    height: 33px;
     border-top: 1px solid #ddd;
     margin: 0 4px;
 }
 
-.header_menu-list ul li:hover {
+.header_menu-list_submenu li:hover {
     background-color: #f3f3f3;
     border-radius: 3px;
     padding-left: 4px;
-    margin: 0;
-    box-shadow: inset 0 0 1px #000;
-}
-
-.header_menu-list ul li:first-child {
-    border: none;
-    margin: 0 0 5px 0;
-    background-color: #f3f3f3;
-    padding-left: 4px;
+    margin: 0 0 5px;
     height: 38px;
-    border-radius: 3px;
 }
 
-.header_menu-list ul li:first-child a{
-    line-height: 10px;
+.header_menu-list_submenu li:hover a {
+    line-height: 20px;
+    vertical-align: top;
 }
 
-.header_menu-list ul li a {
+.header_menu-list_submenu li:first-child {
+    border: none;
+}
+
+.header_menu-list_submenu li a {
     margin-left: 2px;
 }
 
 
-.header_menu-list ul span {
+.header_menu-list_submenu li span {
+    display: none;
     font: 10px Arial, sans-serif;
     color: #aaa;
-    top: 30px;
-    left: 12px;
-    position: absolute;
+    top: -6px;
+    left: 2px;
+    position: relative;
+}
+
+.header_menu-list_submenu li:hover span {
+    display: block;
 }
 
 .header_menu-list_item a {
@@ -173,15 +176,14 @@ body {
 
 .header_menu_button-apply:hover {
     cursor: pointer;
-    background: #fff;
+    background: linear-gradient(45deg, #01b101, #02c402);
     box-shadow: 0 0 5px 2px #ffbb43;
-    color: #666;
 }
 
 .header_menu_button-apply:active {
     background: #666;
     box-shadow: inset 0 0 5px 2px #fff;
-    color: #ffc654;
+    color: #00ff00;
 }
 
 .header_preview {
@@ -334,7 +336,7 @@ body {
 
 .header_preview_button:hover {
     cursor: pointer;
-    background: linear-gradient(30deg, #ff0000, #0000ff);
+    background: linear-gradient(45deg, #01b101, #02c402);
     box-shadow: 0 0 3px 2px #ffbb43;
 }
 
@@ -343,6 +345,9 @@ body {
     box-shadow: inset 0 0 3px 2px #fff;
 }
 
+.header_preview_button:active a {
+    color: #00ff00;
+}
 
 .content_nature {
     margin-bottom: 32px;
@@ -372,11 +377,12 @@ body {
     display: inline-block;
     background-color: #f0f0f0;
     position: relative;
+    padding-bottom: 6px;
 }
 
 .newsline-block_image-about:after {
-    background: linear-gradient(-45deg, #ffffff 6px, transparent 0), linear-gradient(45deg, #ffffff 6px, transparent 0);
-    background-size: 9px 10px;
+    background: linear-gradient(-45deg, #ffffff 5px, transparent 0) -5px 0, linear-gradient(45deg, #ffffff 5px, transparent 0) -5px 0;
+    background-size: 10px 7px;
     content: "";
     display: inline-block;
     position: absolute;
@@ -386,14 +392,19 @@ body {
     height: 6px;
 }
 
-.newsline-block_image {
+.newsline-block_image-about:hover {
     background-color: #fff;
-    margin: 1px;
-    position: relative;
+}
+
+.newsline-block_image-about {
+    border-top: 1px solid #f0f0f0;
+    border-right: 1px solid #f0f0f0;
+    border-left: 1px solid #f0f0f0;
 }
 
 .newsline-block_image img {
-    margin: 2px;
+    background-color: #fff;
+    padding: 2px;
     vertical-align: bottom;
 }
 
@@ -495,12 +506,6 @@ body {
     background-position: -136px -12px;
     height: 36px;
     width: 36px;
-}
-
-.newsline-block_image-about:hover {
-    background-color: #fff;
-    /*border: 1px solid #f0f0f0;*/
-    /*border-bottom: none;*/
 }
 
 .newsline-block_image:hover .newsline-block_image_buttons {
@@ -695,6 +700,11 @@ body {
     color: #666;
     margin-left: 2px;
 }
+
+.footer_menu_list li a:hover {
+    color: #000;
+}
+
 
 .footer_menu_list li span {
     font-size: 11px;
