@@ -13,12 +13,12 @@
 
         <div class="header">
             <div class="header_logo">
-                <h1 class="header_logo-title"><a href="#home">Officetime</a></h1>
+                <h1 class="header_logo-title"><a href="#">Officetime</a></h1>
                 <p class="header_logo-text">Officetime a psd template</p>
             </div>
             <div class="header_menu">
                 <ul class="header_menu-list">
-                    <li class="header_menu-list_item"><a href="#" name="home">Home</a></li>
+                    <li class="header_menu-list_item"><a href="#">Home</a></li>
                     <li class="header_menu-list_item"><a href="#">About</a></li>
                     <li class="header_menu-list_item"><a href="#">Products</a></li>
                     <li class="header_menu-list_item"><a href="#">Blog</a>
@@ -126,12 +126,13 @@
             <div class="content_tabs">
                 <h2 class="tabs_title">Ta<span>bbb</span>s get your content in line</h2>
                 <div class="tabs">
-                <div class="tabs_header">
-                    <div class="tabs_name tabs_name_selected">Tabbb One</div>
-                    <div class="tabs_name">Tabbb Two</div>
-                    <div class="tabs_name">Tabbb Three</div>
-                </div>
-                <div class="tabs_content">
+                    <input type="radio" name="tabs" id="tabs_one" checked="checked"/>
+                    <input type="radio" name="tabs" id="tabs_two"/>
+                    <input type="radio" name="tabs" id="tabs_three"/>
+                    <label for="tabs_one">Tabbb One</label>
+                    <label for="tabs_two">Tabbb Two</label>
+                    <label for="tabs_three">Tabbb Three</label>
+                    <div class="tabs_content first_tab">
                     <p class="tabs_content_title">You content can be <span>highlighted</span> like this.</p>
                     <div class="tabs_content_menu">
                         <ul class="tabs_content_menu_list">
@@ -140,7 +141,7 @@
                         <li><a href="#">Ornare Dolor Pharetra</a></li>
                         <li><a href="#">Nibh Sit Elit</a></li>
                         <li><a href="#">Venenatis Tortor Aenean</a></li>
-                    </ul>
+                        </ul>
                     </div>
                     <div class="tabs_content_newsline">
                         <div class="tabs_content_newsline_image">
@@ -160,6 +161,14 @@
                     </div>
                     </div>
                 </div>
+                    <div class="tabs_content second_tab">
+                        <p class="second_tab_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa dicta doloribus ducimus earum fugit incidunt ipsum laboriosam modi necessitatibus, nemo
+                            nihil porro quaerat quidem reiciendis repellendus tenetur unde veniam vero!</p>
+                    </div>
+                    <div class="tabs_content third_tab">
+                        <p class="third_tab_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa distinctio eos excepturi, exercitationem facilis necessitatibus perspiciatis praesentium
+                            quia rem repudiandae? Amet, animi deserunt eius minima possimus praesentium quas tempore unde.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -200,10 +209,7 @@
                     <span>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</span></li>
                 </ul>
             </div>
-
         </div>
-
-
 
 </div>
 </body>
