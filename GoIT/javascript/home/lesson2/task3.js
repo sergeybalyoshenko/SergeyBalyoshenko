@@ -1,18 +1,18 @@
-var userName = prompt('Enter your user name', '');
+var userLogin = prompt('Enter your login', '');
 
-if (userName == 'admin') {
+if (userLogin == 'admin') {
 
-    var pass = prompt('Enter password', '');
+    var userPassword = prompt('Enter your password', '');
 
-    if (pass == 'passw0rd') {
+    if (userPassword == 'passw0rd') {
     alert('Welcome home!');
-    } else if (pass == null) {
+    } else if (userPassword == null) {
         alert('Canceled');
     } else {
         alert('Wrong password');
     }
 
-} else if (userName == null) {
+} else if (userLogin == null) {
     alert('Canceled');
 } else {
     alert('Access denied');
