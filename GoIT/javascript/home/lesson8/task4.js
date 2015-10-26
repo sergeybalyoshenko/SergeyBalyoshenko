@@ -1,13 +1,13 @@
 function Article() {
     this.created = new Date();
-    Article.count++;
+    Article.counter++;
     Article.date = this.created;
 }
 
-Article.count = 0;
+Article.counter = 0;
 
 Article.showStats = function(){
-    return 'Всего: ' + this.count + ', Последняя: ' + this.date;
+    return 'Всего: ' + this.counter + ', Последняя: ' + this.date;
 };
 
 new Article();
