@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task10</title>
+</head>
+<body>
+
+<table>
+
+    <tbody>
+
+        <tr>
+            <th>Имя</th>
+            <th>Фамилия</th>
+            <th>Отчество</th>
+            <th>Возраст</th>
+        </tr>
+
+        <tr>
+            <td>Вася</td>
+            <td>Петров</td>
+            <td>Александрович</td>
+            <td>10</td>
+        </tr>
+
+        <tr>
+            <td>Петя</td>
+            <td>Иванов</td>
+            <td>Петрович</td>
+            <td>15</td>
+        </tr>
+
+        <tr>
+            <td>Владимир</td>
+            <td>Ленин</td>
+            <td>Ильич</td>
+            <td>9</td>
+        </tr>
+
+    </tbody>
+
+</table>
+
+<button onclick='sort()'>Sort</button>
+
+<script>
+
+    function sort() {
+        var tbody = document.getElementsByTagName('tbody')[0];
+        var rows = [];
+
+        for (var i = tbody.children.length - 1; i > 0; i--) {
+            var child = tbody.removeChild(tbody.children[i]);
+            rows.push(child);
+        }
+
+        rows.sort(function(a, b) {
+            return a.lastChild.innerHTML - b.lastChild.innerHTML;
+        });
+
+        for (var j = 0; j < rows.length; j++) {
+            tbody.appendChild(rows[j]);
+        }
+
+    }
+</script>
+
+</body>
+</html>

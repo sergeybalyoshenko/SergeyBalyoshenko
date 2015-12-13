@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task5</title>
+</head>
+<body>
+
+<h1>Создание списка</h1>
+
+<script>
+    var ul = document.createElement('ul');
+    document.body.appendChild(ul);
+
+    while (true) {
+        var data = prompt('Введите текст ', '');
+
+        if (!data) {
+            break;
+        }
+
+        var li = document.createElement('li');
+        li.appendChild(document.createTextNode(data));
+        ul.appendChild(li);
+    }
+</script>
+
+</body>
+</html>
