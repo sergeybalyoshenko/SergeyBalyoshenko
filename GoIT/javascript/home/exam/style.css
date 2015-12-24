@@ -280,22 +280,23 @@
 }
 
 .zombie-4 {
-    height: 160px;
-    background-position: 0 -760px;
+    height: 210px;
+    width: 250px;
+    background-position: 0 -715px;
 }
 
 @keyframes foot-4 {
-    15%
+    30%
     {
-        background-position: 0 -760px;
+        background-position: 0 -715px;
     }
-    50%
+    65%
     {
-        background-position: -150px -760px;
+        background-position: -250px -715px;
     }
     100%
     {
-        background-position: -300px -760px;
+        background-position: -500px -715px;
     }
 }
 
@@ -305,52 +306,39 @@
 }
 
 .zombie-4_stand {
-    background-position: -450px -760px;
+    background-position: -750px -715px;
 }
 
 .zombie-4_wait {
-    background-position: -450px -760px;
-}
-
-@keyframes shot-4 {
-    0%
-    {
-        background-position: -600px -760px;
-    }
-
-    100%
-    {
-        background-position: -750px -760px;
-    }
+    background-position: -750px -715px;
 }
 
 .zombie-4_shot {
-    animation: shot-4 1s step-start;
-    animation-iteration-count: 1;
+    background-position: -1000px -715px;
 }
 
 .zombie-4_down {
-    background-position: -1050px -760px;
+    background-position: -1460px -715px;
 }
 
 .zombie-4_death {
-    background-position: -1200px -760px;
+    background-position: -1705px -715px;
 }
 
 .zombie-5 {
-    height: 231px;
-    background-position: 0 -924px;
+    height: 150px;
+    background-position: 0 -950px;
 }
 
 @keyframes foot-5 {
     15% {
-        background-position: 0 -924px;
+        background-position: 0 -950px;
     }
     50% {
-        background-position: -150px -924px;
+        background-position: -150px -950px;
     }
     100% {
-        background-position: -300px -924px;
+        background-position: -300px -950px;
     }
 }
 
@@ -360,25 +348,22 @@
 }
 
 .zombie-5_stand {
-    background-position: -465px -924px;
+    background-position: -450px -950px;
 }
 
 .zombie-5_wait {
-    background-position: -900px -924px;
+    background-position: -450px -950px;
 }
 
 @keyframes shot-5 {
-    20%
+    0%
     {
-        background-position: -1050px -924px;
+        background-position: -600px -950px;
     }
-    50%
-    {
-        background-position: -1210px -924px;
-    }
+
     100%
     {
-        background-position: -1350px -924px;
+        background-position: -750px -950px;
     }
 }
 
@@ -388,28 +373,12 @@
     animation-iteration-count: 1;
 }
 
-@keyframes down-5 {
-    0%
-    {
-        background-position: -1500px -924px;
-    }
-    50%
-    {
-        background-position: -1500px -924px;
-    }
-    100%
-    {
-        background-position: -1653px -924px;
-    }
-}
-
 .zombie-5_down {
-    animation: down-5 2s step-start;
-    animation-iteration-count: 1;
+    background-position: -1065px -950px;
 }
 
 .zombie-5_death {
-    background-position: -1653px -924px;
+    background-position: -1240px -950px;
 }
 
 .round {
