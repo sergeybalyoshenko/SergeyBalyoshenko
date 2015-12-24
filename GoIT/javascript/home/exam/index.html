@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wild Zombie</title>
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+<body>
+
+<div class="game">
+
+    <audio id="music" autoplay loop>
+        <source src="audio/intro.mp3">
+    </audio>
+
+    <div class="start">
+       <button class="start_killing"><span class="start_text">Start killing Zombies</span></button>
+    </div>
+
+    <button class="next_round">Next Round</button>
+
+    <div class="info">
+        <p class="info_you">You : 0.00</p>
+        <p class="info_zombie">Zombie : 0.00</p>
+    </div>
+
+    <div class="reward">
+        <p class="reward_money">&#8364; <span class="reward_money_value">0</span><br/>REWARD</p>
+    </div>
+
+    <div class="zombie"></div>
+
+    <span class="round"></span>
+
+    <div class="note">
+    <span class="note_text"></span>
+    </div>
+
+    <div class="message">
+    <span class="message_text"></span>
+    </div>
+
+
+    <script src="javascript.js"></script>
+
+</div>
+
+</body>
+</html>

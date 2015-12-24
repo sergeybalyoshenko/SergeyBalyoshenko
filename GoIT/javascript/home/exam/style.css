@@ -1,0 +1,470 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.game {
+    font: 700 30px "Ubuntu Mono", sans-serif;
+    position: relative;
+    background-image: url("images/bg.jpg");
+    width: 1280px;
+    height: 720px;
+    margin: 100px auto;
+    overflow: hidden;
+}
+
+.game_blood {
+    box-shadow: 0 0 300px 50px rgba(255,0,0,1),
+    inset 0 0 300px 50px rgba(255,0,0,1);
+}
+
+.start {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.start_off {
+    display: none;
+}
+
+.start_killing {
+    position: relative;
+    top: 300px;
+    left: 566px;
+    background: url("images/button.png");
+    border: none;
+    width: 140px;
+    height: 148px;
+    cursor: pointer;
+}
+
+.start_text {
+    font: 700 20px "Ubuntu Mono", sans-serif;
+    position: absolute;
+    top: -40px;
+    left: 0;
+    color: red;
+}
+
+.next_round {
+    font: 700 25px "Ubuntu Mono", sans-serif;
+    color: blue;
+    position: absolute;
+    top: 310px;
+    left: 590px;
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+    border: solid 2px red;
+    border-radius: 100px;
+    box-shadow: 0 0 5px 5px red;
+    cursor: pointer;
+    z-index: 1;
+    display: none;
+}
+
+.next_round:hover {
+    color: green;
+    background-color: yellow;
+}
+
+.next_round:active {
+    box-shadow: inset 0 0 5px 5px red;
+}
+
+.next_round_on {
+    display: inline-block;
+}
+
+.next_round_off {
+    display: none;
+}
+
+.info {
+    padding: 30px 50px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.info_you {
+    color: green;
+}
+
+.info_zombie {
+    color: red;
+}
+
+.reward {
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+}
+
+.reward_money {
+    color: green;
+}
+
+.reward_money_value {
+    color: yellow;
+}
+
+.zombie {
+    position: absolute;
+    left: 1280px;
+    bottom: 100px;
+    width: 150px;
+    height: 231px;
+    background: url("images/sprite.png");
+}
+
+.zombie_go {
+    left: 565px;
+    transition: left 4s linear;
+}
+
+@keyframes foot-1 {
+    15% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: -150px 0;
+    }
+    100% {
+        background-position: -307px 0;
+    }
+}
+
+.zombie-1_foot {
+    animation: foot-1 1s step-start;
+    animation-iteration-count: infinite;
+}
+
+.zombie-1_stand {
+    background-position: -465px 0;
+}
+
+.zombie-1_wait {
+    background-position: -900px 0;
+}
+
+@keyframes shot-1 {
+    20%
+    {
+        background-position: -1050px 0;
+    }
+    50%
+    {
+        background-position: -1200px 0;
+    }
+    100%
+    {
+        background-position: -1350px 0;
+    }
+}
+.zombie-1_shot {
+    animation: shot-1 1s step-start;
+    animation-iteration-count: 1;
+}
+
+@keyframes down-1 {
+    0%
+    {
+        background-position: -1500px 0;
+    }
+    50%
+    {
+        background-position: -1500px 0;
+    }
+    100%
+    {
+        background-position: -1653px 0;
+    }
+}
+
+.zombie-1_down {
+    animation: down-1 2s step-start;
+    animation-iteration-count: 1;
+}
+
+.zombie-1_death {
+    background-position: -1653px 0;
+}
+
+.zombie-2 {
+    height: 114px;
+    background-position: 0 -350px;
+}
+
+@keyframes foot-2 {
+    15%
+    {
+        background-position: 0 -350px;
+    }
+    50%
+    {
+        background-position: -150px -350px;
+    }
+    100%
+    {
+        background-position: -300px -350px;
+    }
+}
+
+.zombie-2_foot {
+    animation: foot-2 0.7s step-start;
+    animation-iteration-count: infinite;
+}
+
+.zombie-2_stand  {
+    background-position: -600px -350px;
+}
+
+.zombie-2_wait {
+    background-position: -600px -350px;
+}
+
+.zombie-2_shot {
+    background-position: -900px -350px;
+}
+
+.zombie-2_down {
+    background-position: -1200px -350px;
+}
+
+.zombie-2_death {
+    background-position: -1350px -350px;
+}
+
+.zombie-3 {
+    height: 160px;
+    background-position: 0 -530px;
+}
+
+@keyframes foot-3 {
+    15%
+    {
+        background-position: 0 -530px;
+    }
+    50%
+    {
+        background-position: -128px -530px;
+    }
+    100%
+    {
+        background-position: -297px -530px;
+    }
+}
+
+.zombie-3_foot {
+    animation: foot-3 0.7s step-start;
+    animation-iteration-count: infinite;
+}
+
+.zombie-3_stand {
+    background-position: -450px -530px;
+}
+
+.zombie-3_wait {
+    background-position: -600px -530px;
+}
+
+.zombie-3_shot {
+    background-position: -750px -530px;
+}
+
+.zombie-3_down,.zombie-3_death  {
+    background-position: -1050px -530px;
+}
+
+.zombie-4 {
+    height: 160px;
+    background-position: 0 -760px;
+}
+
+@keyframes foot-4 {
+    15%
+    {
+        background-position: 0 -760px;
+    }
+    50%
+    {
+        background-position: -150px -760px;
+    }
+    100%
+    {
+        background-position: -300px -760px;
+    }
+}
+
+.zombie-4_foot {
+    animation: foot-4 0.7s step-start;
+    animation-iteration-count: infinite;
+}
+
+.zombie-4_stand {
+    background-position: -450px -760px;
+}
+
+.zombie-4_wait {
+    background-position: -450px -760px;
+}
+
+@keyframes shot-4 {
+    0%
+    {
+        background-position: -600px -760px;
+    }
+
+    100%
+    {
+        background-position: -750px -760px;
+    }
+}
+
+.zombie-4_shot {
+    animation: shot-4 1s step-start;
+    animation-iteration-count: 1;
+}
+
+.zombie-4_down {
+    background-position: -1050px -760px;
+}
+
+.zombie-4_death {
+    background-position: -1200px -760px;
+}
+
+.zombie-5 {
+    height: 231px;
+    background-position: 0 -924px;
+}
+
+@keyframes foot-5 {
+    15% {
+        background-position: 0 -924px;
+    }
+    50% {
+        background-position: -150px -924px;
+    }
+    100% {
+        background-position: -300px -924px;
+    }
+}
+
+.zombie-5_foot {
+    animation: foot-5 1s step-start;
+    animation-iteration-count: infinite;
+}
+
+.zombie-5_stand {
+    background-position: -465px -924px;
+}
+
+.zombie-5_wait {
+    background-position: -900px -924px;
+}
+
+@keyframes shot-5 {
+    20%
+    {
+        background-position: -1050px -924px;
+    }
+    50%
+    {
+        background-position: -1210px -924px;
+    }
+    100%
+    {
+        background-position: -1350px -924px;
+    }
+}
+
+.zombie-5_shot
+{
+    animation: shot-5 1s step-start;
+    animation-iteration-count: 1;
+}
+
+@keyframes down-5 {
+    0%
+    {
+        background-position: -1500px -924px;
+    }
+    50%
+    {
+        background-position: -1500px -924px;
+    }
+    100%
+    {
+        background-position: -1653px -924px;
+    }
+}
+
+.zombie-5_down {
+    animation: down-5 2s step-start;
+    animation-iteration-count: 1;
+}
+
+.zombie-5_death {
+    background-position: -1653px -924px;
+}
+
+.round {
+    position: absolute;
+    top: 50px;
+    left: 580px;
+    color: yellow;
+}
+
+.note {
+    background: url("images/note.png") 100% 100% no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: 210px;
+    bottom: 350px;
+    width: 300px;
+    height: 176px;
+    display: none;
+}
+
+.note_text {
+    position: absolute;
+    top: 45px;
+    left: 170px;
+    color: red;
+    font-size: 30px;
+    max-width: 65px;
+    text-align: center;
+}
+
+.note_on {
+    display: inline-block;
+}
+
+.message {
+    background: url("images/message.png") 100% 100% no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: 700px;
+    bottom: 350px;
+    width: 292px;
+    height: 325px;
+    display: none;
+}
+
+.message_text {
+    position: absolute;
+    top: 175px;
+    left: 95px;
+    color: red;
+    font-size: 30px;
+    max-width: 100px;
+    text-align: center;
+}
+
+.message_on {
+    display: inline-block;
+}
