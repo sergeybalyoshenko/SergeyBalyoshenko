@@ -6,6 +6,7 @@ $(function () {
 
         this.domElems = {
             cart: $('.cart'),
+            cartSize: $('.cart-size'),
             itemTmpl: $('.cart__item_tmpl'),
             totalPrice: $('.cart .totals .price'),
             orderButton: $('.cart__make-order')
@@ -22,6 +23,12 @@ $(function () {
             __self.addToCart(item);
         });
 
+        this.domElems.orderButton.click(function() {
+            alert('Вы заказали ' + __self.getCartSize() + ' товаров на сумму: $' + __self.getTotalPrice());
+            __self.cartArray = [];
+            __self.updateStorage();
+            __self.viewCart();
+        });
     }
 
     Cart.prototype.init = function () {
@@ -43,9 +50,13 @@ $(function () {
     };
 
     Cart.prototype.getCartSize = function () {
-        console.log(this.getCartItems.length);
+        var size = 0;
 
-        return this.getCartItems().length;
+        this.getCartItems().forEach(function(item) {
+            size += parseInt(item.qty);
+        });
+
+        return size;
     };
 
     Cart.prototype.getTotalPrice = function () {
@@ -66,6 +77,8 @@ $(function () {
         this.viewTotalPrice();
 
         this.viewCartList();
+
+        this.viewCartSize();
     };
 
     Cart.prototype.viewCartList = function () {
@@ -86,7 +99,6 @@ $(function () {
         $('.cart__item').remove();
     };
 
-
     Cart.prototype.viewCartItem = function (item) {
         var tmpl = this.domElems.itemTmpl.clone().removeClass('cart__item_tmpl'),
             itemPrice = item.qty * item.price;
@@ -98,8 +110,24 @@ $(function () {
         return tmpl;
     };
 
+    Cart.prototype.viewCartSize = function() {
+        this.domElems.cartSize.text(this.getCartSize());
+    };
+
     Cart.prototype.addToCart = function (item) {
-        this.cartArray.push(item);
+        var foundProduct = false;
+
+        this.cartArray.forEach(function(cartItem) {
+            if (cartItem.id === item.id) {
+                cartItem.qty++;
+                cartItem.price = parseInt(item.price);
+                foundProduct = true;
+            }
+        });
+
+        if (!foundProduct) {
+            this.cartArray.push(item);
+        }
 
         this.updateStorage();
 
@@ -115,5 +143,3 @@ $(function () {
     cart.init();
 
 });
-
-

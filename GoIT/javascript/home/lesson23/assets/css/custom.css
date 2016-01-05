@@ -55,6 +55,16 @@ a:hover {
     color: #ffffff;
 }
 
+.cart-size {
+    display: block;
+    font-size: 12px;
+    position: relative;
+    top: 14px;
+    left: 2px;
+    color: #f08573;
+
+}
+
 /*-----------------------------------
     Breadcrumb
 -----------------------------------*/
